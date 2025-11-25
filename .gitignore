@@ -1,0 +1,41 @@
+# Git-Secret: Secrets folder .gitignore
+# This folder contains sensitive files that should NOT be committed to git
+# Only encrypted versions (.enc files) should be tracked
+
+# Ignore all files by default
+*
+
+# But track encrypted files
+!*.enc
+
+# Track git-secret configuration files
+!.gitignore
+!README.md
+!.git-secret-info.json
+
+# Track subdirectory structure
+!*/
+
+# Ignore common sensitive file patterns
+*.key
+*.pem
+*.p12
+*.pfx
+*.env
+*.secret
+*.password
+*.credential
+*.token
+*.cert
+*.crt
+
+# Ignore backup files
+*.backup
+*.bak
+*~
+
+# Ignore temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
